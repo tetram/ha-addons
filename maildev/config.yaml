@@ -1,0 +1,14 @@
+name: "Maildev"
+description: "A simple module to integrate maildev as an HA addon."
+version: "0.0.1"
+slug: "maildev"
+init: false
+arch:
+  - aarch64
+  - amd64
+  - armhf
+  - i386
+  - armv7
+ports:
+  1080/tcp: 1080
+
