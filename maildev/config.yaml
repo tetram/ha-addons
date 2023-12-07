@@ -11,4 +11,7 @@ arch:
   - armv7
 ports:
   1080/tcp: 1080
-
+  1025/tcp: 1025
+ports_description:
+  1080/tcp: WEB UI port
+  1025/tcp: SMTP port to receive mails
