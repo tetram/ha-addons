@@ -5,7 +5,7 @@ USER root
 
 COPY entrypoint.sh /
 RUN chmod a+x /entrypoint.sh && \
-  apk add --no-cache jq
+  apk add --no-cache jq curl
 
 USER node
 

@@ -1,7 +1,8 @@
 name: "Maildev"
-description: "A simple module to integrate maildev as an HA addon."
+description: "A simple module to integrate maildev as an HA addon"
 version: "0.0.1"
 slug: "maildev"
+url: https://github.com/tetram/ha-addons/tree/main/maildev
 init: false
 arch:
   - aarch64
@@ -15,3 +16,19 @@ ports:
 ports_description:
   1080/tcp: WEB UI port
   1025/tcp: SMTP port to receive mails
+options:
+  log: normal
+  outgoing:
+    active: false
+    host: "my.smtp.server"
+    port: 25
+    user: username
+    password: changeme
+schema:
+  log: list(normal|silent|verbose)
+  outgoing:
+    active: bool
+    host: str
+    port: port
+    user: str
+    password: password
