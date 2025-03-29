@@ -1,4 +1,4 @@
-ARG MD_VERSION=2.1.0
+ARG MD_VERSION=2.2.1
 FROM maildev/maildev:$MD_VERSION
 
 USER root
