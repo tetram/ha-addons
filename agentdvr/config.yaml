@@ -12,9 +12,22 @@ arch:
   - armv7
 host_network: true
 volumes:
-  data:
-    path: share/agentdvr
-    description: Persist agentdvr data
+  config:
+    path: share/agentdvr/config
+    container_path: /AgentDVR/Media/XML
+    description: "AgentDVR configs"
+  recordings:
+    path: share/agentdvr/recordings
+    container_path: /AgentDVR/Media/WebServerRoot/Media
+    description: "Saved recordings"
+  models:
+    path: share/agentdvr/models
+    container_path: /AgentDVR/Media/Models
+    description: "AI models"
+  commands:
+    path: share/agentdvr/commands
+    container_path: /AgentDVR/Commands
+    description: "Custom commands"
 options:
   timezone: 'Europe/Paris'
   webui_port: 8090
