@@ -1,6 +1,6 @@
 name: "Agent DVR"
 description: "A simple module to integrate Agent DVR as an HA addon"
-version: "0.0.1"
+version: "0.1.0"
 slug: "agentdvr"
 url: https://github.com/tetram/ha-addons/tree/main/agentdvr
 init: false
@@ -10,12 +10,11 @@ arch:
   - armhf
   - i386
   - armv7
-#ports:
-#  8090/tcp: 8090
-#ports_description:
-#  8090/tcp: WEB UI port
 host_network: true
-# TODO: setup volume via map
+volumes:
+  data:
+    path: share/agentdvr
+    description: Persist agentdvr data
 options:
   timezone: 'Europe/Paris'
   webui_port: 8090
