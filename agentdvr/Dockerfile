@@ -1,4 +1,4 @@
-ARG VERSION=6.2.7.0
+ARG VERSION=8.2.5.0
 FROM mekayelanik/ispyagentdvr:$VERSION
 
 ENV VERSION=$VERSION
